@@ -50,6 +50,8 @@
             <input type="text" id="first-name" name="first-name" required>
             <label for="region">Yashash Xududingiz:</label>
             <input type="text" id="region" name="region" required>
+            <label for="phone-number">Telefon Raqamingiz:</label>
+            <input type="tel" id="phone-number" name="phone-number" required>
             <label for="direction">Yonalishlar:</label>
             <select id="direction" name="direction" required>
                 <option value="foundation">Foundation</option>
@@ -190,48 +192,49 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
-
-        const firebaseConfig = {
-            apiKey: "AIzaSyD1UDf0twf7ygHmUrSj-IVCcJMbKmR73ls",
-            authDomain: "text-7c188.firebaseapp.com",
-            projectId: "text-7c188",
-            storageBucket: "text-7c188.appspot.com",
-            messagingSenderId: "705912429758",
-            appId: "1:705912429758:web:403aaaec75ee164d3a92ef"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const db = getDatabase(app);
-
-        window.addEventListener('DOMContentLoaded', () => {
-            const form = document.querySelector('form');
-
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-
-                const firstName = document.getElementById('first-name').value;
-                const region = document.getElementById('region').value;
-                const direction = document.getElementById('direction').value;
-
-                const data = {
-                    firstName: firstName,
-                    region: region,
-                    direction: direction
-                };
-
-                set(ref(db, 'Fastech/' + firstName), data)
-                    .then(() => {
-                        console.log('Data saved successfully!');
-                        form.reset(); 
-                    })
-                    .catch((error) => {
-                        console.error('Error saving data:', error);
-                    });
-            });
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
+    
+    const firebaseConfig = {
+        apiKey: "AIzaSyD1UDf0twf7ygHmUrSj-IVCcJMbKmR73ls",
+        authDomain: "text-7c188.firebaseapp.com",
+        projectId: "text-7c188",
+        storageBucket: "text-7c188.appspot.com",
+        messagingSenderId: "705912429758",
+        appId: "1:705912429758:web:403aaaec75ee164d3a92ef"
+    };
+    
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    
+    window.addEventListener('DOMContentLoaded', () => {
+        const form = document.querySelector('form');
+    
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+    
+            const firstName = document.getElementById('first-name').value;
+            const region = document.getElementById('region').value;
+            const phoneNumber = document.getElementById('phone-number').value;
+            const direction = document.getElementById('direction').value;
+    
+            const data = {
+                firstName: firstName,
+                region: region,
+                phoneNumber: phoneNumber,
+                direction: direction
+            };
+    
+            set(ref(db, 'Fastech/' + firstName), data)
+                .then(() => {
+                    console.log('Data saved successfully!');
+                    form.reset(); 
+                })
+                .catch((error) => {
+                    console.error('Error saving data:', error);
+                });
         });
+    });
 
         let sun = document.querySelector("#sun");
         let moon = document.querySelector("#moon");
