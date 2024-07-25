@@ -1,0 +1,444 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.693);
+    position: fixed;
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10; 
+
+}
+
+nav img {
+    margin: 10px;
+    margin-left: 50px;
+    width: 200px;
+    height: 60px;
+}
+
+.socials_chanels {
+    width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.chanels {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+
+}
+
+#youtube {
+    color: red;
+    cursor: pointer;
+}
+
+#yt:hover {
+    box-shadow: 0px 0px 20px red;
+    transition: 1s;
+}
+
+#insta {
+    color: rgb(197, 6, 193);
+    cursor: pointer;
+}
+
+#in:hover {
+    box-shadow: 0px 0px 20px rgb(197, 6, 193);
+    transition: 1s;
+}
+
+#telegram {
+    color: dodgerblue;
+    cursor: pointer;
+}
+
+#tg:hover {
+    box-shadow: 0px 0px 20px dodgerblue;
+    transition: 1s;
+}
+
+nav h1 {
+    color: white;
+    font-family: sans-serif;
+}
+
+#moon {
+    color: rgb(150, 150, 206);
+    cursor: pointer;
+    display: none;
+}
+
+#sun {
+    color: gold;
+    cursor: pointer;
+}
+
+#dark_video, #Light_Video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.page_1 {
+    width: 100%;
+    height: 100vh;
+    position: relative; 
+    display: grid;
+    place-items: center;
+}
+
+#Light_Video {
+    display: none;
+}
+
+
+.text_wraper{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.text_wraper h1{
+    color: gold;
+    font-size: 50px;
+    width: 700px;
+}
+
+.text_wraper p{
+    font-size: 30px;
+    width: 900px;
+}
+
+form {
+    width: 370px;
+    height: 350px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+     display: none; 
+    position: fixed;
+}
+
+input, select, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+#p{
+    color: black;
+    font-family: sans-serif;
+    cursor: pointer;
+   margin-left: 300px;
+}
+
+#It{
+    width: 230px;
+    height: 55px;
+    background-color: rgb(6, 6, 74);
+    color: white;
+    border: none;
+    border-radius: 18px;
+    margin: 30px;
+    margin-left: 300px;
+}
+
+
+.page_2{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(6, 6, 74);
+   
+}
+
+
+.page_2 h1{
+    color: white;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.accordion{
+    width: 75%;
+    margin-left: 200px;
+    margin-top: 100px;
+}
+
+
+.accordion:last-of-type {
+    margin-bottom: 0;
+}
+
+.accordion-flush {
+    margin-top: 0;
+}
+
+#num{
+    font-size: 25px;
+}
+
+.page_3{
+    width: 100%;
+   height: 100vh;
+   background-blend-mode: multiply;
+   background-color: rgba(0, 0, 0, 0.815);
+   background-image: url(https://optim.tildacdn.one/tild6136-3933-4463-b161-383365303434/-/format/webp/8.jpg);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+#Cursi{
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 80px;
+}
+
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pricing-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pricing-card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card-header {
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.pricing-card-header h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.pricing-card-subheader {
+    margin-top: 10px;
+    color: #999;
+}
+
+.pricing-card-body {
+    padding: 20px;
+}
+
+.pricing-card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-card-features li {
+    margin-bottom: 10px;
+}
+
+.pricing-card-button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+}
+
+.container h1{
+    color: white;
+}
+
+li{
+    color: white;
+}
+
+
+.page_4{
+    height: 100vh;
+    width: 100%;
+background-color: rgb(1, 1, 45);
+display: grid;
+place-items: center;
+
+}
+
+
+.page_4 button{
+    width: 200px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gold;
+    border: none;
+    border-radius: 18px;
+}
+
+
+.page_4 h1{
+    color: white;
+    font-family: sans-serif;
+}
+
+.page_4 h3{
+    color: white;
+    font-family: sans-serif;
+}
+
+.page_4 p{
+    color: white;
+    font-family: sans-serif;
+}
+
+#btn:hover{
+    box-shadow: 0px 0px 10px white;
+    transition: 1s;
+}
+
+@media (max-width: 768px) {
+    nav img {
+        width: 120px;
+        height: 36px;
+        margin-left: 10px;
+    }
+
+    .socials_chanels {
+        width: 150px;
+        height: 30px;
+    }
+
+    .chanels {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    #youtube, #insta, #telegram {
+        font-size: 20px;
+    }
+
+    .text_wraper h1 {
+        font-size: 28px;
+        width: 90%;
+    }
+
+    .text_wraper p {
+        font-size: 18px;
+        width: 90%;
+    }
+
+    form {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .accordion {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pricing-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #p, #It {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #It {
+        margin-top: 20px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .text_wrap1, .text_wrap2 {
+        text-align: center;
+    }
+
+    #num {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-height: 600px) {
+    .text_wraper h1 {
+        font-size: 24px;
+    }
+
+    .text_wraper p {
+        font-size: 16px;
+    }
+
+    form {
+        height: auto;
+        padding: 10px;
+    }
+
+    .pricing-card-header h3 {
+        font-size: 18px;
+    }
+
+    .pricing-card-body {
+        padding: 10px;
+    }
+
+    .pricing-card-features li {
+        font-size: 14px;
+    }
+
+    #num {
+        font-size: 13px;
+    }
+}
