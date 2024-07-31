@@ -1,487 +1,754 @@
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-nav {
-    width: 100%;
-    height: 80px;
-    background-blend-mode: multiply;
-    background-color: rgba(0, 0, 0, 0.693);
-    position: fixed;
-    backdrop-filter: blur(6px);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 10; 
-
-}
-
-nav img {
-    margin: 10px;
-    margin-left: 50px;
-    width: 200px;
-    height: 60px;
-}
-
-.socials_chanels {
-    width: 300px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.chanels {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-
-}
-
-#youtube {
-    color: red;
-    cursor: pointer;
-}
-
-#yt:hover {
-    box-shadow: 0px 0px 20px red;
-    transition: 1s;
-}
-
-#insta {
-    color: rgb(197, 6, 193);
-    cursor: pointer;
-}
-
-#in:hover {
-    box-shadow: 0px 0px 20px rgb(197, 6, 193);
-    transition: 1s;
-}
-
-#telegram {
-    color: dodgerblue;
-    cursor: pointer;
-}
-
-#tg:hover {
-    box-shadow: 0px 0px 20px dodgerblue;
-    transition: 1s;
-}
-
-nav h1 {
-    color: white;
-    font-family: sans-serif;
-}
-
-#moon {
-    color: rgb(150, 150, 206);
-    cursor: pointer;
-    display: none;
-}
-
-#sun {
-    color: gold;
-    cursor: pointer;
-}
-
-#dark_video, #Light_Video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.page_1 {
-    width: 100%;
-    height: 100vh;
-    position: relative; 
-    display: grid;
-    place-items: center;
-}
-
-#Light_Video {
-    display: none;
-}
-
-
-.text_wraper{
-    color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.text_wraper h1{
-    color: gold;
-    font-size: 50px;
-    width: 700px;
-}
-
-.text_wraper p{
-    font-size: 30px;
-    width: 900px;
-}
-
-form {
-    width: 370px;
-    height: 400px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: white;
-     display: none; 
-    position: fixed;
-}
-
-input, select, button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 18px;
-    color: black;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-
-#p{
-    color: black;
-    font-family: sans-serif;
-    cursor: pointer;
-   margin-left: 300px;
-}
-
-#It{
-    width: 230px;
-    height: 55px;
-    background-color: rgb(6, 6, 74);
-    color: white;
-    border: none;
-    border-radius: 18px;
-    margin: 30px;
-    margin-left: 300px;
-}
-
-
-.page_2{
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(6, 6, 74);
-   
-}
-
-
-.page_2 h1{
-    color: white;
-    padding-top: 40px;
-    text-align: center;
-}
-
-.accordion{
-    width: 75%;
-    margin-left: 200px;
-    margin-top: 100px;
-}
-
-
-.accordion:last-of-type {
-    margin-bottom: 0;
-}
-
-.accordion-flush {
-    margin-top: 0;
-}
-
-#num{
-    font-size: 25px;
-}
-
-.page_3{
-    width: 100%;
-   height: 100vh;
-   background-blend-mode: multiply;
-   background-color: rgba(0, 0, 0, 0.815);
-   background-image: url(https://optim.tildacdn.one/tild6136-3933-4463-b161-383365303434/-/format/webp/8.jpg);
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
-}
-
-#Cursi{
-    color: white;
-    font-family: sans-serif;
-    text-align: center;
-    padding-top: 80px;
-}
-
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.pricing-table {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.pricing-card {
-    width: calc(33.33% - 20px);
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.pricing-card-header {
-    padding: 20px;
-    text-align: center;
-    background-color: #f5f5f5;
-}
-
-.pricing-card-header h3 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.pricing-card-subheader {
-    margin-top: 10px;
-    color: #999;
-}
-
-.pricing-card-body {
-    padding: 20px;
-}
-
-.pricing-card-features {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.pricing-card-features li {
-    margin-bottom: 10px;
-}
-
-.pricing-card-button {
-    display: block;
-    width: 100%;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-}
-
-.container h1{
-    color: white;
-}
-
-li{
-    color: white;
-}
-
-
-.page_4{
-    height: 100vh;
-    width: 100%;
-background-color: rgb(1, 1, 45);
-display: grid;
-place-items: center;
-
-}
-
-
-.page_4 button{
-    width: 200px;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gold;
-    border: none;
-    border-radius: 18px;
-}
-
-
-.page_4 h1{
-    color: white;
-    font-family: sans-serif;
-}
-
-.page_4 h3{
-    color: white;
-    font-family: sans-serif;
-}
-
-.page_4 p{
-    color: white;
-    font-family: sans-serif;
-}
-
-#btn:hover{
-    box-shadow: 0px 0px 10px white;
-    transition: 1s;
-}
-
-@media (max-width: 768px) {
-
-    
-    .pricing-card {
-        width: calc(50% - 10px); 
-        margin-bottom: 15px;
+ * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
     }
 
-    .pricing-table {
-        flex-direction: column;
-        align-items: center; 
+    nav {
+        width: 100%;
+        height: 80px;
+        background-blend-mode: multiply;
+        background-color: rgba(0, 0, 0, 0.693);
+        position: fixed;
+        backdrop-filter: blur(6px);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 10; 
+
     }
-
-    .pricing-card-button {
-        padding: 8px 16px; 
-    }
-
-
 
     nav img {
-        width: 120px;
-        height: 36px;
-        margin-left: 10px;
+        margin: 10px;
+        margin-left: 50px;
+        width: 200px;
+        height: 60px;
     }
 
     .socials_chanels {
-        width: 150px;
-        height: 30px;
+        width: 300px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
 
     .chanels {
-        width: 30px;
-        height: 30px;
-        font-size: 20px;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+
     }
 
-    #youtube, #insta, #telegram {
-        font-size: 20px;
+    #youtube {
+        color: red;
+        cursor: pointer;
     }
 
-    .text_wraper h1 {
-        font-size: 28px;
-        width: 90%;
+    #yt:hover {
+        box-shadow: 0px 0px 20px red;
+        transition: 1s;
     }
 
-    .text_wraper p {
-        font-size: 18px;
-        width: 90%;
+    #insta {
+        color: rgb(197, 6, 193);
+        cursor: pointer;
     }
+
+    #in:hover {
+        box-shadow: 0px 0px 20px rgb(197, 6, 193);
+        transition: 1s;
+    }
+
+    #telegram {
+        color: dodgerblue;
+        cursor: pointer;
+    }
+
+    #tg:hover {
+        box-shadow: 0px 0px 20px dodgerblue;
+        transition: 1s;
+    }
+
+    nav h1 {
+        color: white;
+        font-family: sans-serif;
+    }
+
+    #moon {
+        color: rgb(150, 150, 206);
+        cursor: pointer;
+        display: none;
+    }
+
+    #sun {
+        color: gold;
+        cursor: pointer;
+    }
+
+    #dark_video, #Light_Video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .page_1 {
+        width: 100%;
+        height: 100vh;
+        position: relative; 
+        display: grid;
+        place-items: center;
+    }
+
+    #Light_Video {
+        display: none;
+    }
+
+
+    .text_wraper{
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .text_wraper h1{
+        color: gold;
+        font-size: 50px;
+        width: 700px;
+    }
+
+    .text_wraper p{
+        font-size: 30px;
+        width: 900px;
+    }
+
+
+    #text_p{
+        color: white;
+    }
+
 
     form {
-        width: 90%;
-        height: auto;
-        padding: 15px;
+        width: 370px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        animation: fadeIn 0.5s ease-in-out;
+        display: none;
+        z-index: 3;
     }
 
-    .accordion {
-        width: 90%; 
-        margin-left: auto;
-        margin-right: auto;
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
 
-    .pricing-card {
-        width: 100%;
+    #close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        color: #333;
+    }
+
+    #close-btn:hover {
+        color: #e74c3c;
+    }
+
+    .input-group {
         margin-bottom: 15px;
     }
 
-    
+    .input-group label {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #666;
+    }
 
-    #p, #It {
-        margin-left: auto;
-        margin-right: auto;
+    .input-group label i {
+        margin-right: 10px;
+        color: #3498db;
+    }
+
+    input, select {
         display: block;
-    }
-
-    #It {
-        margin-top: 20px;
-    }
-
-    .container {
+        width: 100%;
         padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        transition: box-shadow 0.3s, border-color 0.3s;
     }
 
-    .text_wrap1, .text_wrap2 {
+    input:focus, select:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    }
+
+    form button {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+        width: 95%;
+    }
+
+    form button:hover {
+        background: linear-gradient(135deg, #2980b9, #3498db);
+    }
+
+    form button:active {
+        transform: scale(0.98);
+    }
+
+    #p{
+        color: black;
+        font-family: sans-serif;
+        cursor: pointer;
+    margin-left: 300px;
+    }
+
+    #It{
+        width: 230px;
+        height: 55px;
+        background-color: rgb(6, 6, 74);
+        color: white;
+        border: none;
+        border-radius: 18px;
+        margin: 30px;
+        margin-left: 300px;
+    }
+
+
+    .page_2{
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(6, 6, 74);
+    
+    }
+
+
+    .page_2 h1{
+        color: white;
+        padding-top: 40px;
         text-align: center;
     }
 
-    #num {
-        font-size: 13px;
-    }
-
-    .text_wrap1 {
-        font-size: 20px; 
-    }
-
-    .text_wrap2 {
-        font-size: 16px; 
+    .accordion{
+        width: 75%;
+        margin-left: 200px;
+        margin-top: 100px;
     }
 
 
-    .text_wrap{
-        padding-top: 150px;
-    }
-}
-
-@media (max-height: 600px) {
-
-    .text_wrap{
-        padding-top: 150px;
+    .accordion:last-of-type {
+        margin-bottom: 0;
     }
 
-    .pricing-card {
-        width: 100%; 
+    .accordion-flush {
+        margin-top: 0;
+    }
+
+    #num{
+        font-size: 25px;
+    }
+
+    .page_3{
+        width: 100%;
+    height: 100vh;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.815);
+    background-image: url(https://optim.tildacdn.one/tild6136-3933-4463-b161-383365303434/-/format/webp/8.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+
+    #Cursi{
+        color: white;
+        font-family: sans-serif;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .courses {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .course {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 15px;
+        flex: 1;
+        max-width: 300px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .course:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .course-header {
+        background-color: #f0f0f0;
+        border-radius: 12px 12px 0 0;
+        padding: 20px;
+    }
+
+    .course-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .course-body {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        color: #333;
         margin-bottom: 15px;
     }
 
-    .text_wrap1 {
-        font-size: 18px; 
+    p {
+        font-size: 1.1em;
+        color: #666;
+        margin: 10px 0;
     }
 
-    .text_wrap2 {
-        font-size: 14px; 
+    .icon {
+        margin-right: 8px;
     }
 
-    form {
-        height: auto;
-        padding: 10px;
+    .courses  button {
+        background-color: #ffcc00;
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        padding: 15px 30px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    margin-bottom: 10px;
+    width: 90%;
+    margin-left: 15px;
     }
 
-    .pricing-card-header h3 {
-        font-size: 18px;
+    button:hover {
+        background-color: #e6b800;
     }
 
-    .pricing-card-body {
-        padding: 10px;
+    #calendar{
+    color: #EBB807;
     }
 
-    .pricing-card-features li {
-        font-size: 14px;
+    #clock{
+        color: #EBB807;
     }
 
-    #num {
-        font-size: 13px;
+    #Day{
+        color: #EBB807;
     }
-}
+
+
+    .container h1{
+        color: white;
+    }
+
+    li{
+        color: white;
+    }
+
+
+    .page_4{
+        height: 100vh;
+        width: 100%;
+    background-color: rgb(1, 1, 45);
+    display: grid;
+    place-items: center;
+
+    }
+
+    .page_4 button{
+        width: 200px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: gold;
+        border: none;
+        border-radius: 18px;
+    }
+
+
+    .page_4 h1{
+        color: white;
+        font-family: sans-serif;
+    }
+
+    .page_4 h3{
+        color: white;
+        font-family: sans-serif;
+    }
+
+    .page_4 p{
+        color: white;
+        font-family: sans-serif;
+    }
+
+    #btn:hover{
+        box-shadow: 0px 0px 10px white;
+        transition: 1s;
+    }
+
+
+    .page_5{
+        height: 100vh;
+        width: 100%;
+        background-color: #0C0900;
+        position: relative;
+    }
+
+    .text-container {
+        width: 420px;
+        margin-left: 50px;
+    }
+
+    .text-container h1 {
+        font-size: 60px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .text-container p {
+        font-size: 40px;
+        margin-bottom: 15px;
+        color: white;
+    }
+
+
+    .location-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        right: 50px;
+        bottom: 100px;
+    }
+
+    .location-container p {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+
+    .location-image {
+        width: 700px;
+        height: 600px;
+        border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+           display: flex;
+           height: 30px;
+        }
+    
+        nav img {
+            margin: 10px 0;
+            width: 150px;
+            height: auto;
+        }
+    
+        .socials_chanels {
+            width: 100%;
+            justify-content: space-around;
+        }
+    
+        .chanels {
+            width: 35px;
+            height: 35px;
+            font-size: 20px;
+        }
+    
+        #num {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    
+        .page_1 {
+            height: auto;
+            padding-bottom: 20px;
+        }
+    
+        .text_wraper h1 {
+            font-size: 30px;
+            width: 100%;
+        }
+    
+        .text_wraper p {
+            font-size: 20px;
+            width: 100%;
+        }
+    
+        #It {
+            margin: 20px 0;
+            width: 100%;
+        }
+    
+        form {
+            width: 90%;
+            margin: 0 auto;
+        }
+    
+        .page_2 {
+            height: auto;
+            padding: 20px 0;
+        }
+    
+        .accordion {
+            width: 90%;
+            margin: 0 auto;
+        }
+    
+        .page_3 {
+            height: auto;
+            padding: 20px 0;
+        }
+    
+        .container {
+            padding: 20px;
+        }
+    
+        .courses {
+            flex-direction: column;
+        }
+    
+        .course {
+            max-width: 100%;
+        }
+    
+        .page_4 {
+            height: auto;
+            padding: 20px 0;
+        }
+    
+        .page_4 button {
+            width: 100%;
+        }
+    
+        .page_5 {
+            height: auto;
+            padding: 20px 0;
+        }
+    
+        .text-container {
+            width: 100%;
+            margin: 0;
+        }
+    
+        .location-container {
+            position: relative;
+            right: 0;
+            bottom: 0;
+            margin-top: 20px;
+        }
+    
+        .location-image {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+
+    @media (max-width: 431px) {
+
+        nav {
+            width: 100%;
+            height: 30px;
+            padding: 5px;
+        }
+    
+        nav img {
+            width: 120px;
+        }
+    
+        .socials_chanels {
+            gap: 5px;
+        }
+    
+        .chanels {
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+        }
+    
+        #num {
+            font-size: 16px;
+        }
+    
+        .text_wraper h1 {
+            font-size: 24px;
+        }
+    
+        .text_wraper p {
+            font-size: 18px;
+        }
+    
+        #It {
+            font-size: 14px;
+        }
+    
+        form {
+            padding: 10px;
+        }
+    
+        .input-group label {
+            font-size: 12px;
+        }
+    
+        input, select {
+            font-size: 14px;
+        }
+    
+        form button {
+            font-size: 14px;
+        }
+    
+        .page_2 h1 {
+            font-size: 24px;
+        }
+    
+        .accordion-button {
+            font-size: 14px;
+        }
+    
+        .accordion-body {
+            font-size: 12px;
+        }
+    
+        .page_3 h1 {
+            font-size: 24px;
+        }
+    
+        .course h2 {
+            font-size: 18px;
+        }
+    
+        .course p {
+            font-size: 14px;
+        }
+    
+        .course button {
+            font-size: 14px;
+        }
+    
+        .page_4 h1 {
+            font-size: 24px;
+        }
+    
+        .page_4 h3 {
+            font-size: 18px;
+        }
+    
+        .page_4 p {
+            font-size: 14px;
+        }
+    
+        .page_4 button {
+            font-size: 14px;
+        }
+    
+        .page_5 h1 {
+            font-size: 24px;
+        }
+    
+        .page_5 p {
+            font-size: 18px;
+        }
+    }
+    
+    @media (max-height: 933px) {
+        nav {
+            height: auto;
+        }
+    
+        .page_1 {
+            height: auto;
+        }
+    
+        .page_2 {
+            height: auto;
+        }
+    
+        .page_3 {
+            height: auto;
+        }
+    
+        .page_4 {
+            height: auto;
+        }
+    
+        .page_5 {
+            height: auto;
+        }
+    }
